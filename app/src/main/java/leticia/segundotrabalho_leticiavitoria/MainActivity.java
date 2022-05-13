@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lblTexto1 = findViewById(R.id.lblTexto1);
         lblTexto2 = findViewById(R.id.lblTexto2);
+        lblTexto1.setTypeface(null, Typeface.BOLD);
+        lblTexto2.setTypeface(null, Typeface.BOLD);
         txtTexto1 = findViewById(R.id.txtTexto1);
         txtTexto2 = findViewById(R.id.txtTexto2);
         txtTam = findViewById(R.id.txtTam);
@@ -70,9 +72,13 @@ public class MainActivity extends AppCompatActivity {
             if (id_btn == R.id.btnGravaTxt1) {
                 String texto = txtTexto1.getText().toString();
                 lblTexto1.setText(texto);
+                int estilo = Typeface.NORMAL;
+                lblTexto1.setTypeface(null, estilo);
             } else {
                 String texto = txtTexto2.getText().toString();
                 lblTexto2.setText(texto);
+                int estilo = Typeface.NORMAL;
+                lblTexto2.setTypeface(null, estilo);
             }
         }
     }
